@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: rgba(255, 192, 203, 0.598);
+  font-size: 1.3vw;
+}
+
+.forms {
+  margin: 10vw 20vw;
+  width: 30%;
+  h1 {
+    padding-bottom: 1vw;
+  }
+  .form {
+    padding: 2vw 1vw;
+    border: solid;
+    .block {
+      margin-bottom: 1vw;
+      input,
+      select {
+        border: 0.09vw solid;
+        background-color: rgba(161, 195, 223, 0.225);
+      }
+      fieldset {
+        border: 0.09vw solid;
+        padding-left: 0.5vw;
+        label {
+          font-size: 1vw;
+        }
+      }
+    }
+    .form__input {
+      background-color: rgba(255, 192, 203, 0);
+      border-color: lightslategrey;
+      color: black;
+    }
+    .form__submit {
+      font-size: 1.3vw;
+      width: 10vw;
+      height: 2.2vw;
+      border: 0.09vw solid;
+      //border-color: black;
+      background-color: rgb(161, 195, 223);
+    }
+    .error-message {
+      font-size: 1vw;
+      color: red;
+    }
+  }
+}
+
+.error {
+  border-color: red;
+}

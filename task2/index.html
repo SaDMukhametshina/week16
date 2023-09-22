@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="forms">
+        <h1>Форма</h1>
+        <form name="form" class="form" novalidate>
+            <div class="block">
+                <label for="name" class="form__label">Имя:</label>
+                <input type="text" id="name" name="name" class="form__input" placeholder="Введите ваше имя" required
+                    minlength="2" maxlength="20" />
+                <p class="error-message" id="error-name"></p>
+
+            </div>
+            <div class="block">
+                <label for="email" class="form__label">Email:</label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="Введите ваш email" required
+                    pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i" />
+                <p class="error-message" id="error-email"></p>
+
+            </div>
+            <div class="block">
+                <label for="age" class="form__label">Возраст:</label>
+                <input type="number" id="age" name="age" class="form__input" placeholder="Введите ваш возраст"
+                    required />
+                <p class="error-message" id="error-age"></p>
+
+            </div>
+            <div class="block">
+                <fieldset>
+                    <legend>Ваш пол:</legend>
+                    <label class="form__label">Ж</label>
+                    <input type="radio" name="radioW" value="woman" />
+
+                    <label class="form__label">М</label>
+                    <input type="radio" name="radioM" value="man" />
+                </fieldset>
+                <p class="error-message" id="error-gender"></p>
+
+            </div>
+            <div class="block">
+                <label for="select" class="form__label">Выберите профессию:</label>
+                <select id="select" name="select" class="form__select" placeholder="Введите ваш пол" required>
+                    <option value="Врач">Врач</option>
+                    <option value="Программист">Программист</option>
+                    <option value="Учитель">Учитель</option>
+                    <option value="Дизайнер">Дизайнер</option>
+                    <option value="Инженер">Инженер</option>
+                    <option value="Продаве">Продавец</option>
+                    <option value="Другое">Другое</option>
+                </select>
+                <p class="error-message" id="error-job"></p>
+
+            </div>
+            <div class="block">
+                <label>Пароль:</label>
+                <input type="password" id="pass" name="password" class="form__input" minlength="8" required
+                    placeholder="Введите пароль"
+                    pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/" />
+                <p class="error-message" id="error-password"></p>
+
+            </div>
+            <div class="block">
+                <label>Повторите пароль:</label>
+                <input type="password" id="pass2" name="password2" class="form__input" minlength="8" required
+                    placeholder="Повторите пароль"
+                    pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/" />
+                <p class="error-message" id="error-password2"></p>
+
+            </div>
+
+            <div class="block">
+                <input type="checkbox" id="checkbox" name="checkbox" class="form__checkbox" required />
+                <label for="checkbox">Я согласен с обработкой данных</label>
+                <p class="error-message" id="error-checkbox"></p>
+            </div>
+
+            <button type="submit" name="button" class="form__submit">Отправить</button>
+
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
